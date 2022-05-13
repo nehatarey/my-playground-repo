@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 app = FastAPI()
 
+from transformers import pipeline, AutoModelForTokenClassification, AutoTokenizer
 
 from transformers import pipeline
-sentiment_model = pipeline("sentiment-analysis")
+#sentiment_model = pipeline("sentiment-analysis")
+sentiment_model = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
 
 #sentiment_query_sentence = get_random_comment("Hello World")
 #sentiment = sentiment_model(sentiment_query_sentence)
