@@ -15,7 +15,7 @@ class PredictionRequest(BaseModel):
   query_string: str
 
 
-@app.post("my-endpoint")
+@app.post("/my-endpoint")
 def my_endpoint(request: PredictionRequest):
   # YOUR CODE GOES HERE 
   return sentiment_model(["I love you", "I hate you"]) 
