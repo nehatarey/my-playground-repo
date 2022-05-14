@@ -174,3 +174,16 @@ You will learn how to:
 #### Resources
 * https://fastapi.tiangolo.com/tutorial/first-steps/
 * https://fastapi.tiangolo.com/tutorial/body/
+
+
+
+
+## How to use the Docker Image
+<b>Running the Image in a Container</b>
+Download the file named "Dockerfile" - it is the docker image file than can be run,  
+When you run an image, it's ran in a container. In this case we're connecting port `8000` on our deployment machine (left of the `:`) with port `8000` (right of the `:`) in our container.
+
+``` bash
+docker run -dp 8000:8000 fastapi:latest
+```
+</details>
